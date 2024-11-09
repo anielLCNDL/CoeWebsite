@@ -1,0 +1,104 @@
+/*------------------EXTENSION------------*/
+
+.about__achievements{
+    margin-top: 3rem;
+}
+
+.about__achievements-container{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    gap: 5rem;
+}
+
+.about__achievements-right{
+    margin: 1.6rem 0 2.5rem;
+}
+
+.achievements__cards{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+}
+
+.achievement__card{
+    background: var(--color-bg2);
+    padding: 1rem;
+    border-radius: 0.8rem;
+    text-align: center;
+    transition: var(--transition);
+
+    
+}
+
+.achievement__card:hover{
+    background: var(--color-bg1);
+    box-shadow: 0 3rem 3rem rgba(0, 0, 0, 0.3);
+
+}
+
+.achievement__icon{
+    background: var(--color-danger);
+    padding: 0.6rem;
+    border-radius: 1rem;
+    display:inline-block;
+    margin-bottom: 2rem;
+    font-size: 2rem;
+
+}
+
+.achievement__card:nth-child(2) .achievement__icon{
+    background-color: var(--color-success);
+}
+
+.achievement__card:nth-child(3) .achievement__icon{
+    background-color: var(--color-warning);
+}
+
+.achievement__card p {
+    margin-top: 1rem;
+}
+
+.about__achievements-left {
+    display: flex;
+    justify-content: center; /* Centers the image horizontally */
+    align-items: center; /* Centers the image vertically */
+    flex-direction: column;
+    text-align: center;
+}
+
+.about__achievements-left img {
+    max-width: 100%; /* Ensures the image scales within the container */
+    height: auto; /* Maintain the aspect ratio */
+    object-fit: cover; /* Ensures the image doesn't distort */
+}
+
+.about__achievements-left h1 {
+    margin-bottom: 1rem; /* Adds space between the h1 and the image */
+}
+
+/*-------------------- MEDIA QUERIES (TABLETS)-----------------------*/
+
+@media screen and (max-width: 1024px) {
+    .about__achievements{
+        margin-top: 2rem;
+    }
+
+    .about__achievements-container{
+        grid-template-columns: 1fr;
+        gap: 4rem;
+    }
+    .about__achievements-left{
+        width: 70%;
+        margin: 0 auto;
+    }
+  
+}
+/*-------------------- MEDIA QUERIES (MOBILE)-----------------------*/
+
+@media screen and (max-width: 600px) {
+    .achievements__cards{
+        grid-template-columns: 1fr;
+        gap: 0.7rem;
+    }
+    
+}

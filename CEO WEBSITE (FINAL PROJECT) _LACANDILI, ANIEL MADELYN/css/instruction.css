@@ -1,0 +1,222 @@
+.team{
+    background: var(--color-bg1);
+    box-shadow: inset 0 0 3rem rgba(0, 0, 0, 0.5);
+}
+
+.team__container{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+}
+
+.team_member {
+    background: var(--color-bg2);
+    padding: 2rem;
+    border: 1px solid transparent;
+    transition: var(--transition);
+    position: relative;
+}
+
+.team_member:hover{
+    background: transparent;
+    border-color: var(--color-primary);
+}
+
+.team__member-image img{
+    filter: saturate(0);
+}
+
+.team_member:hover img{
+    filter: saturate(1);
+}
+
+.team__member-info *{
+    text-align: center;
+    margin-top: 1.4rem;
+
+}
+
+.team__member-info p{
+    color: var(--color-light);
+}
+
+/*Collge Dean*/
+.team1__container {
+    display: flex; /* Switch from grid to flexbox */
+    align-items: flex-start; /* Align items to the top */
+    gap: 2rem; /* Space between image and text */
+}
+
+.team1_member {
+    background: var(--color-bg2);
+    padding: 2rem;
+    border: 1px solid transparent;
+    transition: var(--transition);
+    display: flex; /* Flexbox layout */
+    gap: 2rem; /* Add space between the image and text */
+}
+
+.team1__member-image {
+    flex: 1; /* Image takes up one part of the available space */
+}
+
+.team1__member-info {
+    flex: 2; /* Info takes up two parts of the available space */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Center the content vertically */
+}
+
+.team1_member:hover {
+    background: transparent;
+    border-color: var(--color-primary);
+}
+
+.team1__member-image img {
+    width: 100%; /* Make the image responsive */
+    height: auto;
+    filter: saturate(0); /* Apply grayscale */
+}
+
+.team1_member:hover img {
+    filter: saturate(1); /* Remove grayscale on hover */
+}
+
+.team1__member-info * {
+    text-align: left; /* Align text to the left */
+    margin-top: 1.4rem;
+}
+
+.team1__member-info p {
+    color: var(--color-light);
+}
+
+/* Chairperson */
+.team2__container {
+    display: flex;
+    flex-direction: column; /* Arrange members vertically */
+    gap: 2rem; /* Space between each team member */
+}
+
+.team2_member {
+    background: var(--color-bg2);
+    padding: 2rem;
+    border: 1px solid transparent;
+    transition: var(--transition);
+    display: flex; /* Flexbox layout */
+    flex-direction: row; /* Arrange image and info side by side */
+    gap: 2rem; /* Add space between the image and text */
+}
+
+.team2__member-image {
+    flex: 1; /* Image takes up one part of the available space */
+}
+
+.team2__member-info {
+    flex: 2; /* Info takes up two parts of the available space */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Center the content vertically */
+}
+
+.team2_member:hover {
+    background: transparent;
+    border-color: var(--color-primary);
+}
+
+.team2__member-image img {
+    width: 100%; /* Make the image responsive */
+    height: auto;
+    filter: saturate(0); /* Apply grayscale */
+}
+
+.team2_member:hover img {
+    filter: saturate(1); /* Remove grayscale on hover */
+}
+
+.team2__member-info * {
+    text-align: left; /* Align text to the left */
+    margin-top: 1.4rem;
+}
+
+.team2__member-info p {
+    color: var(--color-light);
+}
+
+/*-------------------- MEDIA QUERIES (TABLETS)-----------------------*/
+
+@media screen and (max-width: 1024px) {
+
+    .team__container{
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1.5rem;
+
+    }
+
+    .team_member{
+        padding: 1rem;
+    }
+
+    
+    .team1__container{
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1.5rem;
+
+    }
+
+    .team1_member{
+        padding: 1rem;
+    }
+
+    
+    .team2__container{
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1.5rem;
+
+    }
+
+    .team2_member{
+        padding: 1rem;
+    }
+}
+
+/*-------------------- MEDIA QUERIES (MOBILE)-----------------------*/
+
+@media screen and (max-width: 600px){
+    .team__container{
+        grid-template-columns: 1fr 1fr;
+        gap: 0.7rem;
+
+    }
+
+    .team_member{
+        padding: 0;
+    }
+
+    .team_member p{
+        margin-bottom: 1.5rem;
+        font-size: 12px;
+        }
+
+        .team1__container {
+            flex-direction: column; /* Arrange image and info vertically */
+            gap: 1rem; /* Add space between the image and text */
+        }
+    
+        .team1_member {
+            display: flex; /* Flexbox layout */
+            flex-direction: column; /* Arrange image and info vertically */
+            gap: 1rem; /* Add space between the image and text */
+        }
+    
+        .team2__container {
+            flex-direction: column; /* Arrange image and info vertically */
+            gap: 1rem; /* Add space between the image and text */
+        }
+    
+        .team2_member {
+            display: flex; /* Flexbox layout */
+            flex-direction: column; /* Arrange image and info vertically */
+            gap: 1rem; /* Add space between the image and text */
+        }
+}

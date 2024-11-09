@@ -1,0 +1,172 @@
+.research {
+    background: var(--color-bg1);
+    box-shadow: inset 0 0 3rem rgba(0, 0, 0, 0.5);
+   
+}
+
+
+
+
+
+
+/*COURSES*/ 
+.courses{
+    margin-top: 10rem;
+}
+
+.courses__container{
+    display:grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+}
+
+.course{
+  background: var(--color-bg2);
+    text-align: center;
+    border: 1px solid transparent;
+    transition: var(--transition);
+}
+
+.course:hover{
+    background: transparent;
+    border-color: var(--color-primary);
+}
+
+
+.course__info{
+    padding: 2rem;
+}
+
+.course__info p{
+    margin: 1.2rem 0 2rem ;
+    font-size: 0.9rem;
+}
+
+
+/*Publications*/
+
+
+.categories {
+    background: var(--color-bg1);
+    box-shadow: inset 0 0 3rem rgba(0, 0, 0, 0.5);
+   
+}
+
+.categories__left a {
+    text-decoration: underline;
+    color: rgb(255, 255, 255); /* Optional: Change link color to blue */
+}
+
+.categories__right a {
+    text-decoration: underline;
+    color: rgb(255, 255, 255); /* Optional: Change link color to blue */
+}
+
+
+/*Photo*/
+
+.ti{
+    background: var(--color-bg1);
+    box-shadow: inset 0 0 3rem rgba(0, 0, 0, 0.5);
+}
+
+.ti__container{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+.ti_member {
+    background: var(--color-bg3);
+    padding: 2rem;
+    border: 1px solid transparent;
+    transition: var(--transition);
+    position: relative;
+}
+
+
+
+
+/*-------------------- MEDIA QUERIES (TABLETS)-----------------------*/
+
+@media screen and (max-width: 1024px) {
+
+   /*-------------------CATEGORIES------------------*/
+
+   .categories{
+    height: auto;
+
+  }
+  .categories__container{
+    grid-template-columns: 1fr;
+    gap: 3rem;
+
+  }
+  .categories__left{
+    margin-right: 0;
+  }
+
+
+/*-------------------COURSE------------------*/
+
+  .courses{
+    margin-top: 0;
+
+  }
+  .courses__container{
+    grid-template-columns: 1fr 1fr;
+  }
+
+/*-------------------PHOTO------------------*/
+
+.ti__container{
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+
+}
+
+.ti_member{
+    padding: 1rem;
+}
+}
+/*-------------------- MEDIA QUERIES (MOBILE)-----------------------*/
+
+@media screen and (max-width: 600px){
+    /*-------------------CATEGORIES------------------*/
+
+   .categories{
+    height: auto;
+
+  }
+  .categories__container{
+    grid-template-columns: 1fr;
+    gap: 3rem;
+
+  }
+  .categories__left{
+    margin-right: 0;
+  }
+
+
+/*-------------------COURSE------------------*/
+
+  .courses{
+    margin-top: 0;
+
+  }
+  .courses__container{
+    grid-template-columns: 1fr ;
+  }
+
+/*-------------------PHOTO------------------*/
+
+.ti__container{
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+
+}
+
+.ti_member{
+    padding: 1rem;
+}
+}

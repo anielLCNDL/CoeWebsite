@@ -1,0 +1,205 @@
+/* Default styles for larger screens */
+.bsee {
+    background: var(--color-bg2);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+.bsee h3 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #ffffff;
+    text-align: center;
+    padding-right: 7rem;
+}
+
+.bsee__container {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    align-items: center;
+    gap: 2rem;
+    
+}
+
+.bsee_left {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 1rem;
+}
+
+.bsee__image {
+    max-width: 80%;
+    height: auto;
+    margin-top: 1rem;
+}
+
+.bsee__right {
+    flex: 1;
+    text-align: justify;
+}
+
+.bsee0 h5 {
+    font-size: 1.5rem;
+    color: #ffffff;
+    margin-bottom: 0.5rem;
+}
+
+.bsee0 p {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #fff9f9;
+    margin: 0;
+    padding: 0 1rem;
+}
+
+.bsee1 {
+    background: var(--color-bg2);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+.bsee1 h3 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #2c3e50;
+    text-align: center;
+}
+
+.bsee1__container {
+    display: flex;
+    justify-content: center;
+}
+
+.bsee1__left {
+    max-width: 600px;
+    text-align: center;
+}
+
+.bsee1__papers {
+    margin-top: 1rem;
+}
+
+.bsee1__paper:hover {
+    background: #000000;
+}
+
+/* Responsive Styles */
+/* Mobile Styles (up to 600px) */
+@media screen and (max-width: 600px) {
+    .bsee__container {
+        grid-template-columns: 1fr;
+        gap: 0.7rem;
+    }
+
+  
+
+    .bsee__image {
+        max-width: 100%;  /* Ensure the image is responsive */
+        height: auto;     /* Maintain aspect ratio */
+        display: block;   /* Make the image a block-level element */
+        margin-left: auto; /* Center image horizontally */
+        margin-right: auto; /* Center image horizontally */
+    }
+    
+   
+    .bsee0 p {
+        padding: 0 1rem; /* Add some padding for text readability */
+    }
+
+    /* Ensure that BSCE content stays at the top */
+    .bsee_left {
+        order: 1; /* Make sure the left content appears first */
+        grid-template-columns: 1fr;
+        gap: 0.4rem;
+    }
+
+    .bsee__right {
+        order: 2; /* The right content (article) comes second */
+        grid-template-columns: 1fr;
+        gap: 0.4rem;
+    }
+
+    .bsee1__papers {
+        display: grid;  /* Turn the container into a grid */
+        grid-template-columns: 1fr;  /* 1 column for small screens */
+        gap: 0.4rem;  /* Spacing between items */
+    }
+
+    .bsee h3 {
+        font-size: 1.5rem;
+        margin-bottom: 1rem;
+        color: #ffffff;
+        text-align: center;
+        padding-left: 1rem;
+    }
+
+    .bsee0 h5 {
+        font-size: 1.3rem;
+        color: #ffffff;
+        margin-bottom: 0.5rem;
+    }
+    
+    .bsee0 p {
+        font-size: 1rem;
+        line-height: 1.6;
+        color: #fff9f9;
+        margin: 0;
+        padding: 0 1rem;
+    }
+    /* For larger screens (tablet or desktop), you can adjust the grid to have multiple columns */
+    @media screen and (min-width: 768px) {
+        .bsee1__papers {
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));  /* Adjust to have flexible columns */
+        }
+    }
+    
+
+
+}
+
+/* Tablet Styles (up to 1024px) */
+@media screen and (max-width: 1024px) {
+    .bsee__container {
+        flex-direction: row;
+        gap: 1.5rem;
+    }
+
+    .bsee_left,
+    .bsee__right {
+        flex: 1;
+        text-align: center;
+    }
+
+    .bsee__image {
+        max-width: 90%;
+    }
+
+    .bsee1__container {
+        flex-direction: column;
+        gap: 2rem;
+        align-items: center;
+    }
+
+    .bsee1__left {
+        width: 100%;
+        max-width: 800px;
+    }
+
+    .bsee1__papers {
+        display: flex;
+        justify-content: center;
+        gap: 1rem;
+        flex-wrap: wrap;
+    }
+
+    .bsee1__paper {
+        padding: 0.5rem 1rem;
+        margin: 0.5rem 0;
+    }
+
+    .bsee h3 {
+        font-size: 1.8rem;
+        margin-bottom: 1rem;
+        color: #ffffff;
+        text-align: center;
+        padding-right: 2rem;
+    }
+}

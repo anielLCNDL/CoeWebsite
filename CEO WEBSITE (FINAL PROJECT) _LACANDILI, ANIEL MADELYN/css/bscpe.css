@@ -1,0 +1,229 @@
+/* Default styles for larger screens */
+.bscpe {
+    background: var(--color-bg2);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+.bscpe h3 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #ffffff;
+    text-align: center;
+    padding-right: 7rem;
+}
+
+.bscpe__container {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    align-items: center;
+    gap: 2rem;
+    
+}
+
+.bscpe_left {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 1rem;
+}
+
+.bscpe__image {
+    max-width: 80%;
+    height: auto;
+    margin-top: 1rem;
+}
+
+.bscpe__right {
+    flex: 1;
+    text-align: justify;
+}
+
+.bscpe0 h5 {
+    font-size: 1.5rem;
+    color: #ffffff;
+    margin-bottom: 0.5rem;
+}
+
+.bscpe0 p {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #fff9f9;
+    margin: 0;
+    padding: 0 1rem;
+}
+
+.bscpe1 {
+    background: var(--color-bg2);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+.bscpe1 h3 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #2c3e50;
+    text-align: center;
+}
+
+.bscpe1__container {
+    display: flex;
+    justify-content: center;
+}
+
+.bscpe1__left {
+    max-width: 600px;
+    text-align: center;
+}
+
+.bscpe1__papers {
+    text-align: justify; /* Justify the text */
+}
+
+.bscpe1__papers ul {
+    list-style-type: disc; /* Add bullets to the list items */
+    padding-left: 1.5rem; /* Add left padding for better bullet alignment */
+    margin: 0; 
+}
+
+.bscpe1__papers a {
+    text-decoration: underline; /* Underline the links */
+    color: #ffffff; /* Blue color for the links */
+    transition: color 0.3s, text-decoration 0.3s; /* Smooth transition for hover effect */
+}
+
+.bscpe1__papers a:hover {
+    color: #000000; /* Change color on hover */
+    text-decoration: none; /* Remove underline on hover */
+}
+.bscpe1__papers li {
+    margin-bottom: 1rem; /* Space between list items */
+}
+/* Responsive Styles */
+/* Mobile Styles (up to 600px) */
+@media screen and (max-width: 600px) {
+    .bscpe__container {
+        grid-template-columns: 1fr;
+        gap: 0.7rem;
+    }
+
+  
+
+    .bscpe__image {
+        max-width: 100%;  /* Ensure the image is responsive */
+        height: auto;     /* Maintain aspect ratio */
+        display: block;   /* Make the image a block-level element */
+        margin-left: auto; /* Center image horizontally */
+        margin-right: auto; /* Center image horizontally */
+    }
+    
+   
+    .bscpe0 p {
+        padding: 0 1rem; /* Add some padding for text readability */
+    }
+
+    /* Ensure that BSCE content stays at the top */
+    .bscpe_left {
+        order: 1; /* Make sure the left content appears first */
+        grid-template-columns: 1fr;
+        gap: 0.4rem;
+    }
+
+    .bscpe__right {
+        order: 2; /* The right content (article) comes second */
+        grid-template-columns: 1fr;
+        gap: 0.4rem;
+    }
+
+    .bscpe1__papers {
+        display: grid;  /* Turn the container into a grid */
+        grid-template-columns: 1fr;  /* 1 column for small screens */
+        gap: 0.4rem;  /* Spacing between items */
+        
+        
+    }
+
+
+    .bscpe0 h5 {
+        font-size: 1.3rem;
+        color: #ffffff;
+        margin-bottom: 0.5rem;
+    }
+    
+    .bscpe0 p {
+        font-size: 1rem;
+        line-height: 1.6;
+        color: #fff9f9;
+        margin: 0;
+        padding: 0 1rem;
+    }
+
+    .bscpe h3 {
+        font-size: 2rem;
+        margin-bottom: 1rem;
+        color: #ffffff;
+        text-align: center;
+        padding-left: 2rem;
+    }
+
+    .bscpe1__papers ul {
+        padding-right: 1rem; /* Add indentation to the right side */
+    }
+
+    
+
+    
+    /* For larger screens (tablet or desktop), you can adjust the grid to have multiple columns */
+    @media screen and (min-width: 768px) {
+        .bscpe1__papers {
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));  /* Adjust to have flexible columns */
+        }
+    }
+    
+
+
+}
+
+/* Tablet Styles (up to 1024px) */
+@media screen and (max-width: 1024px) {
+    .bscpe__container {
+        flex-direction: row;
+        gap: 1.5rem;
+    }
+    .bscpe_left,
+    .bscpe__right {
+        flex: 1;
+        text-align: center;
+    }
+
+    .bscpe__image {
+        max-width: 90%;
+    }
+
+    .bscpe1__container {
+        flex-direction: column;
+        gap: 2rem;
+        align-items: center;
+    }
+
+    .bscpe1__left {
+        width: 100%;
+        max-width: 800px;
+    }
+
+    .bscpe1__papers {
+        display: flex;
+        justify-content: center;
+        gap: 1rem;
+        flex-wrap: wrap;
+    }
+
+    .bscpe1__paper {
+        padding: 0.5rem 1rem;
+        margin: 0.5rem 0;
+    }
+    .bscpe h3 {
+        font-size: 1.5rem;
+        margin-bottom: 1rem;
+        color: #ffffff;
+        text-align: center;
+        padding-right: 0rem;
+    }
+}
